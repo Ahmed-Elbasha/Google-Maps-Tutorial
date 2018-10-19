@@ -12,6 +12,8 @@ import UIKit
 
 extension ViewController: GMSMapViewDelegate {
     
+    // MARK: Info Window View
+    
     // handles Info Window tap
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         print("didTapInfoWindowOf")
@@ -22,6 +24,7 @@ extension ViewController: GMSMapViewDelegate {
         print("didLongPressInfoWindowOf")
     }
     
+    // set a custom Info Window
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
         view.backgroundColor = UIColor.white
@@ -37,5 +40,19 @@ extension ViewController: GMSMapViewDelegate {
         view.addSubview(label2)
         
         return view
+    }
+    
+    //MARK - GMSMarker Dragging
+    
+    func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
+        print("didBeginDragging")
+    }
+    
+    func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
+        print("didDrag")
+    }
+    
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        print("didEndDragging")
     }
 }

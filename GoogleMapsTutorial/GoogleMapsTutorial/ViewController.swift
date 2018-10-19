@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         marker.title = "Palo Alto"
         marker.snippet = "San Franciseo"
         marker.map = googleMapsView
+        marker.isDraggable = true
     }
 }
 
