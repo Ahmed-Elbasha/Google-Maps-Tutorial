@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E303578217A005D006069D2 /* ViewControllerGoogleMapsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E303577217A005D006069D2 /* ViewControllerGoogleMapsDelegate.swift */; };
 		7E32941221788E5C00F6165F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32941121788E5C00F6165F /* AppDelegate.swift */; };
 		7E32941421788E5C00F6165F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E32941321788E5C00F6165F /* ViewController.swift */; };
 		7E32941721788E5C00F6165F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E32941521788E5C00F6165F /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		0D8AB2A4C50E7DB9621F9171 /* Pods-GoogleMapsTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsTutorial/Pods-GoogleMapsTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		326EC5BB389FD2E5639BDC88 /* libPods-GoogleMapsTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleMapsTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E303577217A005D006069D2 /* ViewControllerGoogleMapsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGoogleMapsDelegate.swift; sourceTree = "<group>"; };
 		7E32940E21788E5C00F6165F /* GoogleMapsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E32941121788E5C00F6165F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E32941321788E5C00F6165F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7E303576217A0022006069D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E303577217A005D006069D2 /* ViewControllerGoogleMapsDelegate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7E32940521788E5B00F6165F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		7E32941021788E5C00F6165F /* GoogleMapsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				7E303576217A0022006069D2 /* Extension */,
 				7E32941121788E5C00F6165F /* AppDelegate.swift */,
 				7E32941321788E5C00F6165F /* ViewController.swift */,
 				7E32941521788E5C00F6165F /* Main.storyboard */,
@@ -202,6 +213,7 @@
 			files = (
 				7E32941421788E5C00F6165F /* ViewController.swift in Sources */,
 				7E32941221788E5C00F6165F /* AppDelegate.swift in Sources */,
+				7E303578217A005D006069D2 /* ViewControllerGoogleMapsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
