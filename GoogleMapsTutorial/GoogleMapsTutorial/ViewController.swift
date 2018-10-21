@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var googleMapsView: GMSMapView!
     
+    var marker: GMSMarker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
     }
 
     func showMarker(position: CLLocationCoordinate2D) {
-        let marker = GMSMarker(position: position)
+        marker = GMSMarker(position: position)
         marker.title = "Palo Alto"
         marker.snippet = "San Franciseo"
         marker.map = googleMapsView

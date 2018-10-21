@@ -55,4 +55,9 @@ extension ViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
         print("didEndDragging")
     }
+    
+    // MARK - GMSMarker Re-Positioning
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        marker.position = coordinate
+    }
 }
