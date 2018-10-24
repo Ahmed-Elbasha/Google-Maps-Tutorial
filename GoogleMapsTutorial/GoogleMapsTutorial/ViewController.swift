@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         googleMapsView.camera = camera
         showMarker(position: camera.target)
         
+        googleMapsView.settings.myLocationButton = true
+        
         //drawPolyline()
         
         //drawPolygon()
