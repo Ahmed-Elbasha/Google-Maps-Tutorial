@@ -34,7 +34,12 @@ class ViewController: UIViewController {
         marker.title = "Palo Alto"
         marker.snippet = "San Franciseo"
         marker.map = googleMapsView
+        
         marker.isDraggable = true
+        
+        marker.icon = UIImage(named: "pin")
+        
+        
     }
     
     // MARK - Draw a Polyline Shape.
