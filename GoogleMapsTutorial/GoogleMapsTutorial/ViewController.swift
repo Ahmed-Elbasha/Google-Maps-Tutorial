@@ -22,7 +22,9 @@ class ViewController: UIViewController {
         googleMapsView.camera = camera
         showMarker(position: camera.target)
         
-        drawRectangle()
+        //drawPolyline()
+        
+        drawPolygon()
     }
 
     func showMarker(position: CLLocationCoordinate2D) {
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     // MARK - Draw a Polyline Shape.
-    func drawRectangle() {
+    func drawPolyline() {
         // Create the path.
         let path = GMSMutablePath()
         path.add(CLLocationCoordinate2D(latitude: 37.36, longitude: -122.0))
@@ -46,6 +48,27 @@ class ViewController: UIViewController {
         // Show what you have drawn.
         let rectangle = GMSPolyline(path: path)
         rectangle.map = googleMapsView
+        rectangle.strokeWidth = 2
+        rectangle.strokeColor = .black
+        
+        //googleMapsView.clear()
+    }
+    
+    func drawPolygon() {
+        // Create a rectangular path.
+        let rectangular = GMSMutablePath()
+        rectangular.addLatitude(37.36, longitude: -122.0)
+        rectangular.addLatitude(37.45, longitude: -122.0)
+        rectangular.addLatitude(37.45, longitude: -122.2)
+        rectangular.addLatitude(37.36, longitude: -122.2)
+        
+        
+        // Create the polygon, and assign it to the map.
+        let polygon = GMSPolygon(path: rectangular)
+        polygon.fillColor = UIColor(red: 0.25, green: 0.0, blue: 0.0, alpha: 0.2)
+        polygon.strokeColor = UIColor.black
+        polygon.strokeWidth = 2
+        polygon.map = googleMapsView
     }
 }
 
