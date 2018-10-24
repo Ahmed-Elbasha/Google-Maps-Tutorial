@@ -24,7 +24,9 @@ class ViewController: UIViewController {
         
         //drawPolyline()
         
-        drawPolygon()
+        //drawPolygon()
+        
+        drawCircle()
     }
 
     func showMarker(position: CLLocationCoordinate2D) {
@@ -69,6 +71,14 @@ class ViewController: UIViewController {
         polygon.strokeColor = UIColor.black
         polygon.strokeWidth = 2
         polygon.map = googleMapsView
+    }
+    
+    func drawCircle() {
+        let circleCenter = CLLocationCoordinate2D(latitude: 37.35, longitude: -122.0)
+        let circle = GMSCircle(position: circleCenter, radius: 100000)
+        circle.map = googleMapsView
+        circle.fillColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
+        circle.strokeColor = UIColor.red
     }
 }
 
