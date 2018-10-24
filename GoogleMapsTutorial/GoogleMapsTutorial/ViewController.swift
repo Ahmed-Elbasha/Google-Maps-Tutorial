@@ -37,9 +37,25 @@ class ViewController: UIViewController {
         
         marker.isDraggable = true
         
-        marker.icon = UIImage(named: "pin")
+        //marker.icon = UIImage(named: "pin")
         
+        let customMarkerView = UIView(frame: CGRect.init(x: 0, y: 0, width: 220, height: 80))
+        customMarkerView.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.3)
+        customMarkerView.layer.cornerRadius = 5
+        customMarkerView.layer.borderColor = UIColor.red.cgColor
+        customMarkerView.layer.borderWidth = 1
         
+        let firstLabel = UILabel(frame: CGRect.init(x: 8, y: 8, width: customMarkerView.frame.size.width - 16, height: 15))
+        firstLabel.text = "Hey!"
+        firstLabel.textColor = UIColor.white
+        customMarkerView.addSubview(firstLabel)
+        
+        let secondLabel = UILabel(frame: CGRect.init(x: firstLabel.frame.origin.x, y: firstLabel.frame.size.height + firstLabel.frame.origin.y + 3, width: firstLabel.frame.size.width, height: firstLabel.frame.size.height))
+        secondLabel.text = "I'm a custom marker view!"
+        secondLabel.textColor = UIColor.white
+        customMarkerView.addSubview(secondLabel)
+        
+        marker.iconView = customMarkerView
     }
     
     // MARK - Draw a Polyline Shape.
