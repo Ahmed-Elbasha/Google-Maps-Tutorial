@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         //drawPolygon()
         
         drawCircle()
+        
     }
 
     func showMarker(position: CLLocationCoordinate2D) {
@@ -102,6 +103,16 @@ class ViewController: UIViewController {
         circle.map = googleMapsView
         circle.fillColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.2)
         circle.strokeColor = UIColor.red
+    }
+    
+    @IBAction func zoomInButtonPressed(_ sender: Any) {
+        let currentZoom = googleMapsView.camera.zoom
+        googleMapsView.animate(toZoom: currentZoom + 0.3)
+    }
+    
+    @IBAction func zoomOutButtonPressed(_ sender: Any) {
+        let currentZoom = googleMapsView.camera.zoom
+        googleMapsView.animate(toZoom: currentZoom - 0.3)
     }
 }
 

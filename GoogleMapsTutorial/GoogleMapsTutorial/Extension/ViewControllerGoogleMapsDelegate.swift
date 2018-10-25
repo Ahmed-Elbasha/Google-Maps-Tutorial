@@ -60,4 +60,15 @@ extension ViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         marker.position = coordinate
     }
+    
+    
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        return true
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapMyLocation location: CLLocationCoordinate2D) {
+        googleMapsView.animate(toZoom: googleMapsView.maxZoom)
+        marker.position = (mapView.myLocation as? CLLocationCoordinate2D)!
+    }
 }

@@ -24,13 +24,47 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="OO7-pP-d6N"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tx-wy-ehz">
+                                <rect key="frame" x="329" y="311.5" width="30" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jMG-U7-4cL"/>
+                                    <constraint firstAttribute="width" constant="30" id="xPX-AR-dwf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pn0-c7-JZj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiH-c5-v04">
+                                <rect key="frame" x="329" y="383.5" width="30" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="LvA-I8-NXP"/>
+                                    <constraint firstAttribute="height" constant="44" id="XAw-if-Prz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ogb-Dt-JBK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YiH-c5-v04" firstAttribute="top" secondItem="3Tx-wy-ehz" secondAttribute="bottom" constant="28" id="888-wO-fC5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YiH-c5-v04" secondAttribute="trailing" constant="16" id="94B-Hj-3OU"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AkR-xX-haB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Tx-wy-ehz" secondAttribute="trailing" constant="16" id="EnO-3W-8Je"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7Z-JL-lDu"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OAN-4l-f5n"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QVN-LJ-RMf"/>
+                            <constraint firstItem="3Tx-wy-ehz" firstAttribute="centerY" secondItem="qbd-p1-Wiw" secondAttribute="centerY" id="veR-WG-jpE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
