@@ -114,5 +114,27 @@ class ViewController: UIViewController {
         let currentZoom = googleMapsView.camera.zoom
         googleMapsView.animate(toZoom: currentZoom - 0.3)
     }
+    
+    @IBAction func toggleGesturesButtonPressed(_ sender: Any) {
+        if checkMapViewGesturesAvailabilty() {
+            googleMapsView.settings.tiltGestures = false
+            googleMapsView.settings.zoomGestures = false
+            googleMapsView.settings.rotateGestures = false
+            googleMapsView.settings.scrollGestures = false
+        } else {
+            googleMapsView.settings.tiltGestures = true
+            googleMapsView.settings.zoomGestures = true
+            googleMapsView.settings.rotateGestures = true
+            googleMapsView.settings.scrollGestures = true
+        }
+    }
+    
+    func checkMapViewGesturesAvailabilty() -> Bool {
+        if googleMapsView.settings.tiltGestures && googleMapsView.settings.zoomGestures && googleMapsView.settings.rotateGestures && googleMapsView.settings.scrollGestures {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 

@@ -54,6 +54,22 @@
                                     <action selector="zoomOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ogb-Dt-JBK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lni-GP-hg9">
+                                <rect key="frame" x="292" y="251.5" width="67" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="aQO-pE-1X3"/>
+                                    <constraint firstAttribute="height" constant="44" id="xr1-4i-3q8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Guestres">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleGesturesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5l-l0-sJT"/>
+                                    <action selector="zoomOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pws-HY-Pvt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,6 +80,8 @@
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7Z-JL-lDu"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OAN-4l-f5n"/>
                             <constraint firstItem="qbd-p1-Wiw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QVN-LJ-RMf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lni-GP-hg9" secondAttribute="trailing" constant="16" id="jcn-3t-3Pp"/>
+                            <constraint firstItem="3Tx-wy-ehz" firstAttribute="top" secondItem="Lni-GP-hg9" secondAttribute="bottom" constant="16" id="lKA-Dd-CEK"/>
                             <constraint firstItem="3Tx-wy-ehz" firstAttribute="centerY" secondItem="qbd-p1-Wiw" secondAttribute="centerY" id="veR-WG-jpE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
